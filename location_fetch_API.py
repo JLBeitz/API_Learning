@@ -10,7 +10,7 @@ def get_ip():
     else:
         return None
     
-def get_locatuon():
+def get_location():
     if get_ip() != None:
         r2 = requests.get("http://ip-api.com/json/" + get_ip())
         if r2.status_code == 200:
@@ -20,3 +20,5 @@ def get_locatuon():
     else:
         return None
 
+y = json.loads(get_location())
+print(y["country"])
