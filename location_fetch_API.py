@@ -21,4 +21,3 @@ def get_location():
         return None
 
 y = json.loads(get_location())
-print(y["country"])
